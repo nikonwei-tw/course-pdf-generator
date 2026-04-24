@@ -21,7 +21,7 @@ default_courses = pd.DataFrame({
     "學期或學年": ["一學年", "單學期", "單學期"],
     "學分數": [6, 3, 2],
     "擋修": ["無", "擋修:程式設計", "無"],
-    "模組": ["無", "無", "模組:核心必修"]
+    "模組": ["核心模組", "次要模組一", "次要模組二"]
 })
 courses_df = st.data_editor(default_courses, num_rows="dynamic", use_container_width=True)
 
@@ -43,7 +43,7 @@ uni_courses = pd.DataFrame({
 uni_courses_df = st.data_editor(uni_courses, use_container_width=True)
 
 st.header("五、學系說明規定與會議資訊")
-notes = st.text_area("學系說明規定 (支援多行)", "1. 學生修讀本系課程需依循先修科目規定。\n2. 跨系選修最多承認 15 學分。")
+notes = st.text_area("學系說明規定 (支援多行)", "1. 核心模組需滿足32學分。\n2. 次要模組一需滿足16學分。\n3. 次要模組二需滿足16學分。")
 meeting_info = st.text_input("本表通過會議及時間資訊", "115年5月10日 114學年度第2學期第3次系務會議通過")
 
 
