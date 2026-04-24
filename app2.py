@@ -86,6 +86,7 @@ HTML_TEMPLATE = """
             <td>{{ row['科目名稱'] }}</td>
             <td style="text-align: center;">{{ row['學期或學年'] }}</td>
             <td style="text-align: center;">{{ row['學分數'] }}</td>
+            <td>{{ row['必修或必選'] }}</td>
             <td>{{ row['模組'] }}</td>
             <td>{{ row['擋修'] }}</td>
         </tr>
