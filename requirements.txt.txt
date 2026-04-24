@@ -1,4 +1,0 @@
-streamlit
-jinja2
-pdfkit
-pandas
