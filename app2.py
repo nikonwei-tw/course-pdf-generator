@@ -20,6 +20,7 @@ default_courses = pd.DataFrame({
     "科目名稱": ["程式設計", "資料結構", "專題實作(一)"],
     "學期或學年": ["一學年", "單學期", "單學期"],
     "學分數": [6, 3, 2],
+    "必修或必選": [必修, 必選, 必選],
     "擋修": ["無", "擋修:程式設計", "無"],
     "模組": ["核心模組", "次要模組一", "次要模組二"]
 })
@@ -74,8 +75,9 @@ HTML_TEMPLATE = """
     <table>
         <tr>
             <th width="30%">科目名稱</th>
-            <th width="15%">學期或學年</th>
-            <th width="10%">學分數</th>
+            <th width="10%">學期或學年</th>
+            <th width="5%">學分數</th>
+            <th width="10%">必修/必選</th>
             <th width="25%">模組</th>
             <th width="20%">擋修</th>
         </tr>
@@ -93,16 +95,16 @@ HTML_TEMPLATE = """
     <div class="section-title">二、畢業學分數結構</div>
     <div class="summary-box">
         校訂必修： <b>{{ uni_req }}</b> 學分 ＋ 
-        學系必修： <b>{{ dept_req }}</b> 學分 ＋ 
+        學系必修(含必選)： <b>{{ dept_req }}</b> 學分 ＋ 
         自由選修： <b>{{ free_elec }}</b> 學分 ＝ 
         應修總畢業學分： <b>{{ total_req }}</b> 學分
     </div>
 
-    <div class="section-title">三、校訂必修各類課程科目表</div>
+    <div class="section-title">三、校訂必修</div>
     <table>
         <tr>
             <th width="20%">課程類別</th>
-            <th width="80%">規定說明</th>
+            <th width="80%">規定及說明</th>
         </tr>
         {% for index, row in uni_courses_df.iterrows() %}
         <tr>
