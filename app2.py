@@ -76,14 +76,16 @@ HTML_TEMPLATE = """
             <th width="30%">科目名稱</th>
             <th width="15%">學期或學年</th>
             <th width="10%">學分數</th>
-            <th width="45%">修讀條件限制 / 模組規劃 / 擋修</th>
+            <th width="25%">模組</th>
+            <th width="20%">擋修</th>
         </tr>
         {% for index, row in courses_df.iterrows() %}
         <tr>
             <td>{{ row['科目名稱'] }}</td>
             <td style="text-align: center;">{{ row['學期或學年'] }}</td>
             <td style="text-align: center;">{{ row['學分數'] }}</td>
-            <td>{{ row['修讀條件/模組/擋修'] }}</td>
+            <td>{{ row['模組'] }}</td>
+            <td>{{ row['擋修'] }}</td>
         </tr>
         {% endfor %}
     </table>
