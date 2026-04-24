@@ -20,8 +20,9 @@ default_courses = pd.DataFrame({
     "科目名稱": ["程式設計", "資料結構", "專題實作(一)"],
     "學期或學年": ["一學年", "單學期", "單學期"],
     "學分數": [6, 3, 2],
-    "修讀條件/模組/擋修": ["無", "擋修:程式設計", "無"]
-    "模組": ["無", "無", "模組:核心必修"]})
+    "擋修": ["無", "擋修:程式設計", "無"],
+    "模組": ["無", "無", "模組:核心必修"]
+})
 courses_df = st.data_editor(default_courses, num_rows="dynamic", use_container_width=True)
 
 st.header("三、畢業學分數結構")
